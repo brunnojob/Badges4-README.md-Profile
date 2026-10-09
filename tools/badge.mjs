@@ -33,6 +33,7 @@ export function render(label, message, color = "blue") {
     /[\x00-\x1f]/.test(label + message)
   )
     throw new Error("invalid_badge_text");
+  if (typeof color !== "string") throw new Error("invalid_color");
   color = colors[color] ?? color.replace(/^#/, "");
   if (!/^[a-f0-9]{6}$/i.test(color)) throw new Error("invalid_color");
   const width = (text) =>
@@ -62,7 +63,13 @@ export function audit(markdown) {
     /!\[[^\]]*\]\((https?:\/\/[^\s)]+)\)/g,
   )) {
     const address = match[1];
-    const url = new URL(address);
+    let url;
+    try { url = new URL(address); }
+    catch {
+      results.push({ url: address, line: markdown.slice(0, match.index).split("\n").length,
+        problems: ["malformed_url"] });
+      continue;
+    }
     const problems = [];
     if (url.protocol !== "https:") problems.push("insecure_transport");
     if (url.username || url.password) problems.push("embedded_credentials");

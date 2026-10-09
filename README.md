@@ -17,3 +17,11 @@ The auditor detects insecure transport, embedded credentials, oversized fields, 
 ## Catalog
 
 The original catalog is in [docs/catalog.md](docs/catalog.md). This repository derives from Badges4-README.md-Profile; the original license and attribution files are preserved.
+
+## Implementation update
+
+Badge audits collect malformed URLs as report issues instead of aborting the whole audit. Non-string color values are rejected before SVG generation.
+
+Credits for this fork's updates: [brunnodev.store](https://brunnodev.store). Original authors retain their respective attribution.
+
+Contribution trailer: `Co-authored-by: nyctophile <33561761+ineedfoundmyway@users.noreply.github.com>`.
