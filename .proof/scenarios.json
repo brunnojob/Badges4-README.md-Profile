@@ -1,0 +1,34 @@
+{
+  "repository": "brunnojob/Badges4-README.md-Profile",
+  "inputs": [
+    ".proof/scenarios.json",
+    ".proof/demo.mjs"
+  ],
+  "cases": [
+    {
+      "name": "node --test tests/*.test.mjs",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "node --test tests/*.test.mjs"
+      ],
+      "timeout": 900,
+      "display": true
+    },
+    {
+      "name": "Render an SVG badge and reject malicious color input",
+      "argv": [
+        "node",
+        ".proof/demo.mjs"
+      ],
+      "contains": [
+        "\"maliciousColorRejected\":true",
+        "\"svgBytes\""
+      ],
+      "timeout": 120
+    }
+  ]
+}
