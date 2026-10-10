@@ -1,0 +1,15 @@
+$ bash -e -o pipefail -c node --test tests/*.test.mjs
+✔ malformed addresses are collected and invalid color types are rejected (1.524412ms)
+✔ SVG text and accessible labels escape markup (0.462617ms)
+✔ Markdown audit reports insecure badge URLs and styles (0.16423ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 55.745024
+
+$ node .proof/demo.mjs
+{"svgBytes":438,"maliciousColorRejected":true,"audited":{"total":1,"issues":[],"valid":true}}

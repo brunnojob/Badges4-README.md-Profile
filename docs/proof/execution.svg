@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="486" viewBox="0 0 1100 486">
+<rect width="1100" height="486" rx="12" fill="#0d1117"/>
+<title>Recorded program execution</title>
+<g font-family="monospace" font-size="16">
+<text x="24" y="36" fill="#c9d1d9">brunnojob/Badges4-README.md-Profile</text>
+<text x="24" y="58" fill="#c9d1d9">Executed: 2026-10-10T02:35:23.457804+00:00</text>
+<text x="24" y="80" fill="#c9d1d9">Source: f45376425da1</text>
+<text x="24" y="102" fill="#c9d1d9"></text>
+<text x="24" y="124" fill="#3fb950">PASS node --test tests/*.test.mjs</text>
+<text x="24" y="146" fill="#79c0ff">$ bash -e -o pipefail -c node --test tests/*.test.mjs</text>
+<text x="24" y="168" fill="#c9d1d9">✔ malformed addresses are collected and invalid color types are rejected (1.524412ms)</text>
+<text x="24" y="190" fill="#c9d1d9">✔ SVG text and accessible labels escape markup (0.462617ms)</text>
+<text x="24" y="212" fill="#c9d1d9">✔ Markdown audit reports insecure badge URLs and styles (0.16423ms)</text>
+<text x="24" y="234" fill="#c9d1d9">ℹ tests 3</text>
+<text x="24" y="256" fill="#c9d1d9">ℹ suites 0</text>
+<text x="24" y="278" fill="#c9d1d9">ℹ pass 3</text>
+<text x="24" y="300" fill="#c9d1d9">ℹ fail 0</text>
+<text x="24" y="322" fill="#c9d1d9">ℹ cancelled 0</text>
+<text x="24" y="344" fill="#c9d1d9">Full output: evidence.json</text>
+<text x="24" y="366" fill="#c9d1d9"></text>
+<text x="24" y="388" fill="#3fb950">PASS Render an SVG badge and reject malicious color input</text>
+<text x="24" y="410" fill="#79c0ff">$ node .proof/demo.mjs</text>
+<text x="24" y="432" fill="#c9d1d9">{&quot;svgBytes&quot;:438,&quot;maliciousColorRejected&quot;:true,&quot;audited&quot;:{&quot;total&quot;:1,&quot;issues&quot;:[],&quot;valid&quot;:true}}</text>
+</g>
+</svg>

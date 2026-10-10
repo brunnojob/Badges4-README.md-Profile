@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/Badges4-README.md-Profile",
+  "source_commit": "f45376425da15853ebce86a9f78649c2377596bf",
+  "generated_at": "2026-10-10T02:35:23.457804+00:00",
+  "run_url": "https://github.com/brunnojob/Badges4-README.md-Profile/actions/runs/38017511190",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "06d1cbdd304d98695204b098d14cfede5c0251226bd29419602be12d42cda342",
+    ".proof/demo.mjs": "f87ca39a3cee43ea9e814af4f7b58ecdd14d35f7acafe34fb70db1f16ee2e693"
+  },
+  "cases": [
+    {
+      "display": true,
+      "name": "node --test tests/*.test.mjs",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "node --test tests/*.test.mjs"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.101,
+      "output": "✔ malformed addresses are collected and invalid color types are rejected (1.524412ms)\n✔ SVG text and accessible labels escape markup (0.462617ms)\n✔ Markdown audit reports insecure badge URLs and styles (0.16423ms)\nℹ tests 3\nℹ suites 0\nℹ pass 3\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 55.745024\n",
+      "output_sha256": "3058860c5c8f8923fa7b410c2016d8a554cd1b860f25fa6247682e17d2eab33c"
+    },
+    {
+      "display": true,
+      "name": "Render an SVG badge and reject malicious color input",
+      "argv": [
+        "node",
+        ".proof/demo.mjs"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "{\"svgBytes\":438,\"maliciousColorRejected\":true,\"audited\":{\"total\":1,\"issues\":[],\"valid\":true}}\n",
+      "output_sha256": "406eb08c3f4d61a7892577f60272e0dc177ccd551d2a7a6da3d2d3bf673c3082"
+    }
+  ],
+  "passed": true
+}
